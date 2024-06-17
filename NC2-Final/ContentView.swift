@@ -26,7 +26,7 @@ struct ContentView: View {
                     Spacer()
                 }
                 HStack {
-                    Button {//여기에 액션 넣기
+                    Button {//여기에 액션이 들어가면 됩니다.
                     } label: {
                         VStack {
                             Image(systemName: "camera")
@@ -47,7 +47,7 @@ struct ContentView: View {
                     }
                     
                     Button {
-                        //여기에 액션
+                        //여기에 액션이 들어가면 됩니다.
                     } label: {
                         VStack {
                             Image(systemName: "photo")
@@ -70,7 +70,7 @@ struct ContentView: View {
                         Text($0)
                     }
                 }.pickerStyle(.segmented)
-                List{
+                List{// 여기 건드려야해요
                     Section(header: Text("사람별 유사도")) {
                         HStack{ // 여기가 러너이름이랑 유사도 뜰만한 곳이에요
                             Image("11")
