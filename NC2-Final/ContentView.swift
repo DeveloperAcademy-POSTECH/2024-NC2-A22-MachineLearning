@@ -72,7 +72,7 @@ struct ContentView: View {
                 }.pickerStyle(.segmented)
                 List{
                     Section(header: Text("사람별 유사도")) {
-                        HStack{ // 여기가 러너이름이랑 유사도 뜰 곳
+                        HStack{ // 여기가 러너이름이랑 유사도 뜰만한 곳이에요
                             Image("11")
                                 .resizable()
                                 .frame(width: 50, height: 50)
@@ -82,7 +82,6 @@ struct ContentView: View {
                             Text("64%")
                                 .multilineTextAlignment(.trailing)
                         }
-                        
                     }
                 }.listStyle(.inset)
             }.padding(16)
