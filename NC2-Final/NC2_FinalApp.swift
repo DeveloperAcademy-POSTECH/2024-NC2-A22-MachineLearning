@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+// 주석을 달거야
 @main
 struct NC2_FinalApp: App {
     var body: some Scene {
