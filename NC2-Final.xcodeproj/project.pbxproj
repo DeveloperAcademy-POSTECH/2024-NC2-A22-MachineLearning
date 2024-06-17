@@ -11,7 +11,7 @@
 		82D0138C2C2036D800FEA222 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D0138B2C2036D800FEA222 /* ContentView.swift */; };
 		82D0138E2C2036D900FEA222 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82D0138D2C2036D900FEA222 /* Assets.xcassets */; };
 		82D013912C2036D900FEA222 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82D013902C2036D900FEA222 /* Preview Assets.xcassets */; };
-		82D013982C2057C100FEA222 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D013972C2057C100FEA222 /* Sample.swift */; };
+		82D013A02C207E4900FEA222 /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D0139F2C207E4900FEA222 /* SheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +20,7 @@
 		82D0138B2C2036D800FEA222 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		82D0138D2C2036D900FEA222 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82D013902C2036D900FEA222 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		82D013972C2057C100FEA222 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
+		82D0139F2C207E4900FEA222 /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 			children = (
 				82D013892C2036D800FEA222 /* NC2_FinalApp.swift */,
 				82D0138B2C2036D800FEA222 /* ContentView.swift */,
-				82D013972C2057C100FEA222 /* Sample.swift */,
+				82D0139F2C207E4900FEA222 /* SheetView.swift */,
 				82D0138D2C2036D900FEA222 /* Assets.xcassets */,
 				82D0138F2C2036D900FEA222 /* Preview Content */,
 			);
@@ -142,7 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82D0138C2C2036D800FEA222 /* ContentView.swift in Sources */,
-				82D013982C2057C100FEA222 /* Sample.swift in Sources */,
+				82D013A02C207E4900FEA222 /* SheetView.swift in Sources */,
 				82D0138A2C2036D800FEA222 /* NC2_FinalApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

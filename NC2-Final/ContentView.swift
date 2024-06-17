@@ -19,14 +19,14 @@ struct ContentView: View {
             VStack {
                 Spacer().frame(height: 50)
                 HStack {
-                    Text("샤샤와 디리니")
+                    Text("송중기와 디리니")
                         .font(.system(size: 28))
                         .fontWeight(.bold)
                         .foregroundStyle(Color.white)
                     Spacer()
                 }
                 HStack {
-                    Button {//여기에 액션 넣기
+                    Button {//여기에 액션이 들어가면 됩니다.
                     } label: {
                         VStack {
                             Image(systemName: "camera")
@@ -47,7 +47,7 @@ struct ContentView: View {
                     }
                     
                     Button {
-                        //여기에 액션
+                        //여기에 액션이 들어가면 됩니다.
                     } label: {
                         VStack {
                             Image(systemName: "photo")
@@ -55,7 +55,7 @@ struct ContentView: View {
                                 .foregroundStyle(Color("Secondary"))
                                 .frame(width: 24, height: 19)
                             Text("사진에서 불러오기")
-                                .font(.system(size: 16))
+                                .font(.system(size: 14))
                                 .fontWeight(.regular)
                                 .foregroundStyle(Color("Secondary"))
                         }
@@ -65,14 +65,18 @@ struct ContentView: View {
                     }
                 }
                 Spacer()
-                Picker("", selection: $selectedTab) {
-                    ForEach(persons, id: \.self) {
-                        Text($0)
-                    }
-                }.pickerStyle(.segmented)
-                List{
+                
+                List{// 여기 건드려야해요
+                                   Section {
+                                       Picker("", selection: $selectedTab) {
+                                           ForEach(persons, id: \.self) {
+                                               Text($0)
+                                           }
+                                       }.pickerStyle(.segmented)
+                                   }
                     Section(header: Text("사람별 유사도")) {
-                        HStack{ // 여기가 러너이름이랑 유사도 뜰만한 곳이에요
+                
+                        HStack{ // 여기가 러너이름이랑 유사도 반복시킬 곳
                             Image("11")
                                 .resizable()
                                 .frame(width: 50, height: 50)
