@@ -2,8 +2,9 @@
 ## 🎥 Youtube Link
 (추후 만들어진 유튜브 링크 추가)
 
-## 💡 About Augmented Reality
-(해당 기술에 대한 조사 내용 정리)
+## 💡 About Machine Learning
+### Machine Learning 
+
 
 > **예시** <br/><br/>
 _(내용 중략) <br/>
@@ -21,3 +22,14 @@ ARKit에서 ARSCNView가 있다는 것을 알게 되었고, ARSCNView에서는 S
 
 ## 🛠️ About Code
 (핵심 코드에 대한 설명 추가)
+
+## About Pair
+|**디리니**|**샤샤**|
+| :------: |  :------: |
+|[<img src="https://github.com/DeveloperAcademy-POSTECH/2024-NC2-A22-MachineLearning/assets/150351817/bde14fd0-8d3b-421f-b05b-d34c90707447" height=150 width=150> <br/> @hi_dirini] (여기에 디리니 인스타링크?) |[<img src="https://github.com/DeveloperAcademy-POSTECH/2024-NC2-A22-MachineLearning/assets/150351817/4f34721e-deb3-4811-a698-e818f1cda4d0" height=150 width=150> <br/> @샤샤 인스타 (여기에 샤샤 인스타링크?) |
+
+</div>
+
+<br>
+
+<img width="976" alt="스크린샷 2024-06-18 오후 11 53 53" src="https://github.com/DeveloperAcademy-POSTECH/2024-NC2-A22-MachineLearning/assets/150351817/4f34721e-deb3-4811-a698-e818f1cda4d0">
