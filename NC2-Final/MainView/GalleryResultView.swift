@@ -84,6 +84,7 @@ struct GalleryResultView: View {
                     }
                 }
                 .listStyle(InsetGroupedListStyle())
+                .scrollContentBackground(.hidden)
                 .frame(height: 200)
                 Button(action: {
                     isPresented = true
