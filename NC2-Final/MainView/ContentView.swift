@@ -35,10 +35,10 @@ struct ContentView: View {
                 VStack {
                     Spacer().frame(height: 50)
                     HStack {
-                        Text("샤샤와 디리니")
+                        Text("샤샤 VS 디리니")
                             .font(.system(size: 28))
                             .fontWeight(.bold)
-                            .foregroundStyle(Color.black)
+                            .foregroundStyle(Color.white)
                         Spacer()
                     }
                     HStack {
@@ -49,42 +49,43 @@ struct ContentView: View {
                                 Image(systemName: "camera")
                                     .resizable()
                                     .frame(width: 24, height: 19)
-                                    .foregroundStyle(Color.blue)
+                                    .foregroundStyle(Color("PrimaryBlue"))
                                 Text("카메라로 촬영하기")
                                     .font(.system(size: 14))
                                     .fontWeight(.regular)
-                                    .foregroundStyle(Color.blue)
+                                    .foregroundStyle(Color("PrimaryBlue"))
                             }
                             .frame(width: 177, height: 69)
                             .background(Color.clear)
                             .overlay(RoundedRectangle(cornerRadius: 9)
-                                .stroke(Color.blue, lineWidth: 1))
+                                .stroke(Color("PrimaryBlue"), lineWidth: 1))
                         }
                         NavigationLink(destination: CameraResultView(image: $selectedImage, photos: $photos, navigateDecidingTeamView: $navigateDecidingTeamView, isPresented: $isCameraPresented), isActive: $isCameraPresented) {
                             EmptyView()
                         }
+                        Spacer()
                         Button {
                             isImagePickerPresented = true
                         } label: {
                             VStack {
                                 Image(systemName: "photo")
                                     .resizable()
-                                    .foregroundStyle(Color.gray)
+                                    .foregroundStyle(Color("PrimaryBlack"))
                                     .frame(width: 24, height: 19)
                                 Text("사진에서 불러오기")
                                     .font(.system(size: 14))
                                     .fontWeight(.regular)
-                                    .foregroundStyle(Color.gray)
+                                    .foregroundStyle(Color("PrimaryBlack"))
                             }
                             .frame(width: 177, height: 69)
-                            .background(Color.blue)
+                            .background(Color("PrimaryBlue"))
                             .clipShape(RoundedRectangle(cornerRadius: 9))
                         }
                         NavigationLink(destination: GalleryResultView(image: $selectedImage, photos: $photos, navigateDecidingTeamView: $navigateDecidingTeamView, isPresented: $isImagePickerPresented), isActive: $isImagePickerPresented) {
                             EmptyView()
                         }
                     }
-                    Spacer()
+                    Spacer().frame(height: 30)
 
                     List {
                         Section {
@@ -96,16 +97,16 @@ struct ContentView: View {
                             .pickerStyle(.segmented)
                             .listRowSeparator(.hidden)
                         }
-                        Section(header: Text("당신의 팀")) {
+                        Section(header: Text("팀원")) {
                             ForEach(photos.filter { $0.label == selectedPerson }, id: \.id) { photo in
                                 HStack {
                                     if photo.label == .dirini {
-                                        Image("photo1")//드리니
+                                        Image("Dirini")//드리니
                                             .resizable()
                                             .frame(width: 50, height: 50)
                                             .clipShape(RoundedRectangle(cornerRadius: 9))
                                     } else {
-                                        Image("minxcode")//사샤
+                                        Image("Sasha")//사샤
                                             .resizable()
                                             .frame(width: 50, height: 50)
                                             .clipShape(RoundedRectangle(cornerRadius: 9))
@@ -117,7 +118,7 @@ struct ContentView: View {
                                     Button(role: .destructive) {
                                         deletePhoto(photo)
                                     } label: {
-                                        Label("Delete", systemImage: "trash")
+                                        Label("삭제", systemImage: "trash")
                                     }
                                 }
                             }
@@ -147,4 +148,8 @@ struct ContentView: View {
     private func deletePhoto(_ photo: PhotoData) {
         photos.removeAll { $0.id == photo.id }
     }
+}
+
+#Preview{
+    ContentView()
 }
