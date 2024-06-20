@@ -65,27 +65,37 @@ struct CameraResultView: View {
                                 .multilineTextAlignment(.trailing)
                         }
                     }
-
-//                    Section {
-//                        if let selectedObjectDetailsID = selectedObjectDetailsID,
-//                           let selectedObjectDetails = selectedObjects.first(where: { $0.id == selectedObjectDetailsID }) {
-//                            HStack {
-//                                Text("당신의 팀")
-//                                Spacer()
-//                                Text(selectedObjectDetails.label == "김하준" ? "Team 샤샤" : selectedObjectDetails.label == "조민" ? "Team 디리니" : "N/A")
-//                            }
-//                        } else {
-//                            HStack {
-//                                Text("당신의 팀")
-//                                Spacer()
-//                                Text("N/A")
-//                            }
-//                        }
-//                    }
+                    Section {
+                        if let selectedObjectDetailsID = selectedObjectDetailsID,
+                           let selectedObjectDetails = selectedObjects.first(where: { $0.id == selectedObjectDetailsID }) {
+                            HStack {
+                                Text("당신의 팀")
+                                Spacer()
+                                Text(selectedObjectDetails.label == "김하준" ? "Team 샤샤" : selectedObjectDetails.label == "조민" ? "Team 디리니" : "N/A")
+                            }
+                        } else {
+                            HStack {
+                                Text("당신의 팀")
+                                Spacer()
+                                Text("N/A")
+                            }
+                        }
+                    }
                 }
                 .listStyle(InsetGroupedListStyle())
                 .frame(height: 200)
                 
+                Button(action: {
+                    isPresented = true
+                }) {
+                    Text("다시 촬영하기")
+                        .font(.system(size: 16))
+                        .fontWeight(.regular)
+                        .foregroundColor(.blue)
+                        .frame(width: 361, height: 56)
+                        .overlay(RoundedRectangle(cornerRadius: 9)
+                            .stroke(Color.blue, lineWidth: 1))
+                }
                 Button(action: {
                     savePhoto(name: name, label: selectedLabel)
                     self.isPresented = false

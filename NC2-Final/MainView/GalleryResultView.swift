@@ -51,18 +51,6 @@ struct GalleryResultView: View {
                 
                 Spacer().frame(height: 20)
                 
-                Button(action: {
-                    isPresented = true
-                }) {
-                    Text("다시 선택하기")
-                        .font(.system(size: 16))
-                        .fontWeight(.regular)
-                        .foregroundColor(.blue)
-                        .frame(width: 361, height: 56)
-                        .overlay(RoundedRectangle(cornerRadius: 9)
-                            .stroke(Color.blue, lineWidth: 1))
-                }
-                
                 List {
                     Section {
                         HStack {
@@ -91,13 +79,23 @@ struct GalleryResultView: View {
                 }
                 .listStyle(InsetGroupedListStyle())
                 .frame(height: 200)
-                
+                Button(action: {
+                    isPresented = true
+                }) {
+                    Text("다시 선택하기")
+                        .font(.system(size: 16))
+                        .fontWeight(.regular)
+                        .foregroundColor(.blue)
+                        .frame(width: 361, height: 56)
+                        .overlay(RoundedRectangle(cornerRadius: 9)
+                            .stroke(Color.blue, lineWidth: 1))
+                }
                 Button(action: {
                     savePhoto(name: name, label: selectedLabel)
                     self.isPresented = false
                     self.navigateDecidingTeamView = true
                 }) {
-                    Text("완료")
+                    Text("결정하기")
                         .font(.system(size: 16))
                         .fontWeight(.regular)
                         .foregroundColor(.gray)
