@@ -64,7 +64,7 @@ struct DecidingTeamView: View {
                                 .overlay(RoundedRectangle(cornerRadius: 12)
                                     .stroke(Color.white.opacity(0.2), lineWidth: 2))
                                 .blur(radius: 10)
-                            LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.1), Color.white.opacity(0.2)]),
+                            LinearGradient(gradient: Gradient(colors: [Color("PrimaryBlue").opacity(0.1), Color.white.opacity(0.2)]),
                                            startPoint: .topTrailing, endPoint: .bottomLeading)
                                 .clipShape(RoundedRectangle(cornerRadius: 12))
                                 .frame(width: 237, height: 328)
