@@ -26,7 +26,7 @@ struct CameraResultView: View {
 
     var body: some View {
         ZStack {
-            Color(.systemGray6).ignoresSafeArea()
+            Color("PrimaryBlack").ignoresSafeArea()
 
             VStack {
                 Spacer().frame(height: 50)
@@ -51,7 +51,7 @@ struct CameraResultView: View {
                         )
                         .frame(height: 300)
                 } else {
-                    Text("사진을 선택하거나 찍어주세요")
+                    Text("사진을 찍어주세요")
                         .padding()
                 }
 
@@ -71,18 +71,20 @@ struct CameraResultView: View {
                             HStack {
                                 Text("당신의 팀")
                                 Spacer()
-                                Text(selectedObjectDetails.label == "김하준" ? "Team 샤샤" : selectedObjectDetails.label == "조민" ? "Team 디리니" : "N/A")
+                                Text(selectedObjectDetails.label == "김하준" ? "Team 샤샤" : selectedObjectDetails.label == "조민" ? "Team 디리니" : "얼굴을 선택해주세요")
                             }
                         } else {
                             HStack {
                                 Text("당신의 팀")
                                 Spacer()
-                                Text("N/A")
+                                Text("빨간 상자가 안나오면\n다시 찍어주세요")
+                                    .foregroundColor(Color(.systemGray))
                             }
                         }
                     }
                 }
                 .listStyle(InsetGroupedListStyle())
+                .scrollContentBackground(.hidden)
                 .frame(height: 200)
                 
                 Button(action: {
@@ -91,10 +93,10 @@ struct CameraResultView: View {
                     Text("다시 촬영하기")
                         .font(.system(size: 16))
                         .fontWeight(.regular)
-                        .foregroundColor(.blue)
+                        .foregroundColor(Color("PrimaryBlue"))
                         .frame(width: 361, height: 56)
                         .overlay(RoundedRectangle(cornerRadius: 9)
-                            .stroke(Color.blue, lineWidth: 1))
+                            .stroke(Color("PrimaryBlue"), lineWidth: 1))
                 }
                 Button(action: {
                     savePhoto(name: name, label: selectedLabel)

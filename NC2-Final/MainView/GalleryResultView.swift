@@ -26,9 +26,14 @@ struct GalleryResultView: View {
     
     var body: some View {
         ZStack {
-            Color(.systemGray6).ignoresSafeArea()
+            Color("PrimaryBlack").ignoresSafeArea()
             VStack {
-                Spacer().frame(height: 87)
+                Spacer().frame(height: 50)
+                
+                Text("본인의 얼굴을 선택해주세요")
+                    .font(.system(size: 24))
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
                 
                 if let selectedImage = image {
                     Image(uiImage: selectedImage)
@@ -66,13 +71,14 @@ struct GalleryResultView: View {
                             HStack {
                                 Text("당신의 팀")
                                 Spacer()
-                                Text(selectedObjectDetails.label == "김하준" ? "Team 샤샤" : selectedObjectDetails.label == "조민" ? "Team 디리니" : "N/A")
+                                Text(selectedObjectDetails.label == "김하준" ? "Team 샤샤" : selectedObjectDetails.label == "조민" ? "Team 디리니" : "얼굴을 선택해주세요")
                             }
                         } else {
                             HStack {
                                 Text("당신의 팀")
                                 Spacer()
-                                Text("N/A")
+                                Text("빨간 상자가 안나오면\n다른 사진을 골라주세요")
+                                    .foregroundColor(Color(.systemGray))
                             }
                         }
                     }
@@ -85,10 +91,10 @@ struct GalleryResultView: View {
                     Text("다시 선택하기")
                         .font(.system(size: 16))
                         .fontWeight(.regular)
-                        .foregroundColor(.blue)
+                        .foregroundColor(Color("PrimaryBlue"))
                         .frame(width: 361, height: 56)
                         .overlay(RoundedRectangle(cornerRadius: 9)
-                            .stroke(Color.blue, lineWidth: 1))
+                            .stroke(Color("PrimaryBlue"), lineWidth: 1))
                 }
                 Button(action: {
                     savePhoto(name: name, label: selectedLabel)
@@ -97,10 +103,10 @@ struct GalleryResultView: View {
                 }) {
                     Text("결정하기")
                         .font(.system(size: 16))
-                        .fontWeight(.regular)
-                        .foregroundColor(.gray)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("PrimaryBlack"))
                         .frame(width: 361, height: 56)
-                        .background(Color.blue)
+                        .background(Color("PrimaryBlue"))
                         .cornerRadius(9)
                 }
                 Spacer().frame(height: 43)
