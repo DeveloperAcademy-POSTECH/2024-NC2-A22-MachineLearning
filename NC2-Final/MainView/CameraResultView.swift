@@ -29,8 +29,13 @@ struct CameraResultView: View {
             Color(.systemGray6).ignoresSafeArea()
 
             VStack {
-                Spacer().frame(height: 87)
+                Spacer().frame(height: 50)
 
+                Text("본인의 얼굴을 선택해주세요")
+                    .font(.system(size: 24))
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                
                 if let selectedImage = image {
                     Image(uiImage: selectedImage)
                         .resizable()
@@ -61,22 +66,22 @@ struct CameraResultView: View {
                         }
                     }
 
-                    Section {
-                        if let selectedObjectDetailsID = selectedObjectDetailsID,
-                           let selectedObjectDetails = selectedObjects.first(where: { $0.id == selectedObjectDetailsID }) {
-                            HStack {
-                                Text("당신의 팀")
-                                Spacer()
-                                Text(selectedObjectDetails.label == "김하준" ? "Team 샤샤" : selectedObjectDetails.label == "조민" ? "Team 디리니" : "N/A")
-                            }
-                        } else {
-                            HStack {
-                                Text("당신의 팀")
-                                Spacer()
-                                Text("N/A")
-                            }
-                        }
-                    }
+//                    Section {
+//                        if let selectedObjectDetailsID = selectedObjectDetailsID,
+//                           let selectedObjectDetails = selectedObjects.first(where: { $0.id == selectedObjectDetailsID }) {
+//                            HStack {
+//                                Text("당신의 팀")
+//                                Spacer()
+//                                Text(selectedObjectDetails.label == "김하준" ? "Team 샤샤" : selectedObjectDetails.label == "조민" ? "Team 디리니" : "N/A")
+//                            }
+//                        } else {
+//                            HStack {
+//                                Text("당신의 팀")
+//                                Spacer()
+//                                Text("N/A")
+//                            }
+//                        }
+//                    }
                 }
                 .listStyle(InsetGroupedListStyle())
                 .frame(height: 200)
@@ -86,12 +91,12 @@ struct CameraResultView: View {
                     self.isPresented = false
                     self.navigateDecidingTeamView = true
                 }) {
-                    Text("완료")
+                    Text("결정하기")
                         .font(.system(size: 16))
-                        .fontWeight(.regular)
-                        .foregroundColor(.gray)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("PrimaryBlack"))
                         .frame(width: 361, height: 56)
-                        .background(Color.blue)
+                        .background(Color("PrimaryBlue"))
                         .cornerRadius(9)
                 }
                 Spacer().frame(height: 43)
@@ -146,3 +151,5 @@ struct CameraResultView: View {
         photos.append(photo)
     }
 }
+
+
