@@ -20,8 +20,8 @@
 		C75A00482C23F8FD002675B5 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75A00472C23F8FD002675B5 /* ImagePicker.swift */; };
 		C75A004A2C23F914002675B5 /* UIimage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75A00492C23F914002675B5 /* UIimage.swift */; };
 		C75A004D2C23F93F002675B5 /* PhotoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75A004C2C23F93F002675B5 /* PhotoData.swift */; };
-		C75A005A2C23FD82002675B5 /* ClassificationModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C75A00572C23FD81002675B5 /* ClassificationModel.mlmodel */; };
-		C75A005B2C23FD82002675B5 /* ObjectDetector1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C75A00582C23FD81002675B5 /* ObjectDetector1.mlmodel */; };
+		C7609E2A2C2412AA00796B08 /* ObjectDetector1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C7609E282C2412AA00796B08 /* ObjectDetector1.mlmodel */; };
+		C7609E2B2C2412AA00796B08 /* ClassificationModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C7609E292C2412AA00796B08 /* ClassificationModel.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,10 +39,8 @@
 		C75A00472C23F8FD002675B5 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		C75A00492C23F914002675B5 /* UIimage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIimage.swift; sourceTree = "<group>"; };
 		C75A004C2C23F93F002675B5 /* PhotoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoData.swift; sourceTree = "<group>"; };
-		C75A00572C23FD81002675B5 /* ClassificationModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ClassificationModel.mlmodel; sourceTree = "<group>"; };
-		C75A00582C23FD81002675B5 /* ObjectDetector1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ObjectDetector1.mlmodel; sourceTree = "<group>"; };
-		C75A005D2C23FD86002675B5 /* ObjectDetector1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ObjectDetector1.mlmodel; sourceTree = "<group>"; };
-		C75A005E2C23FD86002675B5 /* ClassificationModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ClassificationModel.mlmodel; sourceTree = "<group>"; };
+		C7609E282C2412AA00796B08 /* ObjectDetector1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = ObjectDetector1.mlmodel; path = ../../../../Desktop/ObjectDetector1.mlmodel; sourceTree = "<group>"; };
+		C7609E292C2412AA00796B08 /* ClassificationModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = ClassificationModel.mlmodel; path = ../../../../Desktop/ClassificationModel.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +57,6 @@
 		82D0137D2C2036D800FEA222 = {
 			isa = PBXGroup;
 			children = (
-				82D013892C2036D800FEA222 /* NC2_FinalApp.swift */,
 				82D013882C2036D800FEA222 /* NC2-Final */,
 				82D013872C2036D800FEA222 /* Products */,
 			);
@@ -76,13 +73,15 @@
 		82D013882C2036D800FEA222 /* NC2-Final */ = {
 			isa = PBXGroup;
 			children = (
+				82D013892C2036D800FEA222 /* NC2_FinalApp.swift */,
 				C75A003C2C23F828002675B5 /* MainView */,
 				C75A003F2C23F871002675B5 /* DetailView */,
 				C75A00462C23F8CF002675B5 /* Func */,
 				C75A004B2C23F925002675B5 /* Data */,
 				82D0138D2C2036D900FEA222 /* Assets.xcassets */,
+				C7609E292C2412AA00796B08 /* ClassificationModel.mlmodel */,
+				C7609E282C2412AA00796B08 /* ObjectDetector1.mlmodel */,
 				82D0138F2C2036D900FEA222 /* Preview Content */,
-				C75A005C2C23FD85002675B5 /* Model */,
 			);
 			path = "NC2-Final";
 			sourceTree = "<group>";
@@ -128,29 +127,9 @@
 		C75A004B2C23F925002675B5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				C75A00592C23FD81002675B5 /* Model */,
 				C75A004C2C23F93F002675B5 /* PhotoData.swift */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		C75A00592C23FD81002675B5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				C75A00572C23FD81002675B5 /* ClassificationModel.mlmodel */,
-				C75A00582C23FD81002675B5 /* ObjectDetector1.mlmodel */,
-			);
-			name = Model;
-			path = ../../../../../Downloads/WhoRU/WhoRU/Model;
-			sourceTree = "<group>";
-		};
-		C75A005C2C23FD85002675B5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				C75A005E2C23FD86002675B5 /* ClassificationModel.mlmodel */,
-				C75A005D2C23FD86002675B5 /* ObjectDetector1.mlmodel */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,16 +204,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C75A00452C23F8C7002675B5 /* ObjectDetector.swift in Sources */,
-				C75A005B2C23FD82002675B5 /* ObjectDetector1.mlmodel in Sources */,
+				C7609E2B2C2412AA00796B08 /* ClassificationModel.mlmodel in Sources */,
 				C75A003B2C23F815002675B5 /* GalleryResultView.swift in Sources */,
 				C75A00432C23F8A2002675B5 /* DetectionOverlay.swift in Sources */,
 				C75A00482C23F8FD002675B5 /* ImagePicker.swift in Sources */,
-				C75A005A2C23FD82002675B5 /* ClassificationModel.mlmodel in Sources */,
 				82D0138C2C2036D800FEA222 /* ContentView.swift in Sources */,
 				82D013A02C207E4900FEA222 /* CameraResultView.swift in Sources */,
 				C75A00412C23F88E002675B5 /* CameraView.swift in Sources */,
 				C75A004D2C23F93F002675B5 /* PhotoData.swift in Sources */,
 				C75A004A2C23F914002675B5 /* UIimage.swift in Sources */,
+				C7609E2A2C2412AA00796B08 /* ObjectDetector1.mlmodel in Sources */,
 				C75A003E2C23F84A002675B5 /* DecidingTeamView.swift in Sources */,
 				82D0138A2C2036D800FEA222 /* NC2_FinalApp.swift in Sources */,
 			);
@@ -370,22 +349,24 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NC2-Final/Preview Content\"";
-				DEVELOPMENT_TEAM = 7S6LWLK37L;
+				DEVELOPMENT_TEAM = PAPTDHH68K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라를 허용해야 합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dirini.NC2-Final";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hajunkimApple.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -401,22 +382,24 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NC2-Final/Preview Content\"";
-				DEVELOPMENT_TEAM = 7S6LWLK37L;
+				DEVELOPMENT_TEAM = PAPTDHH68K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라를 허용해야 합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dirini.NC2-Final";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hajunkimApple.;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
