@@ -111,8 +111,10 @@ struct ContentView: View {
                                             .frame(width: 50, height: 50)
                                             .clipShape(RoundedRectangle(cornerRadius: 9))
                                     }
-                                    Text(photo.name)
                                     Spacer()
+                                    Text(photo.name) // 이부분 trailing으로 바꾸고 싶음
+                                        .multilineTextAlignment(.trailing)
+                                    
                                 }
                                 .swipeActions {
                                     Button(role: .destructive) {

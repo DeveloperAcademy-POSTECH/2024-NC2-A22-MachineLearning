@@ -15,22 +15,22 @@ struct DecidingTeamView: View {
 
     var body: some View {
         ZStack {
-            Image("bg")
+            Image("resultviewbg")
                 .resizable()
                 .scaledToFill()
             ZStack {
-                Image("Ellipse 7")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 226, height: 226)
-                    .offset(x: -120, y:-50)
-                
-                Image("Group 14")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 212, height: 244)
-                    .offset(x: 100, y: 200)
-                
+//                Image("Ellipse 7")
+//                    .resizable()
+//                    .scaledToFit()
+//                    .frame(width: 226, height: 226)
+//                    .offset(x: -120, y:-50)
+//                
+//                Image("Group 14")
+//                    .resizable()
+//                    .scaledToFit()
+//                    .frame(width: 212, height: 244)
+//                    .offset(x: 100, y: 200)
+//                
                 VStack {
                     Spacer()
                     if let lastPhoto = photos.last {
@@ -56,7 +56,7 @@ struct DecidingTeamView: View {
                         ZStack {
                             BlurView(style: .light)
                                 .blur(radius: 30, opaque: true)
-                                .opacity(0.5)
+                                .opacity(0.8)
                                 .background(.ultraThinMaterial)
                                 .opacity(0.3)
                                 .frame(width: 237, height: 328)
@@ -78,18 +78,18 @@ struct DecidingTeamView: View {
                                         .fontWeight(.bold)
                                         .foregroundStyle(Color.white)
                                         .multilineTextAlignment(.center)
-                                        .opacity(0.6)
+                                        .opacity(0.8)
                                     
                                     Spacer().frame(height: 10)
                                     
                                     if lastPhoto.label == .dirini {
-                                        Image("Group 14")//디리니
+                                        Image("Dirini")//디리니
                                             .resizable()
                                             .frame(width: 179, height: 220)
                                             .aspectRatio(contentMode: .fit)
                                             .clipShape(RoundedRectangle(cornerRadius: 12))
                                     } else {
-                                        Image("minxcode")//사샤
+                                        Image("Sasha")//사샤
                                             .resizable()
                                             .frame(width: 179, height: 220)
                                             .aspectRatio(contentMode: .fit)
@@ -125,10 +125,10 @@ struct DecidingTeamView: View {
                         Text("홈으로 가기")
                             .font(.system(size: 16))
                             .fontWeight(.bold)
-                            .foregroundStyle(Color.red)
+                            .foregroundStyle(Color("PrimaryBlue"))
                     }
                     .frame(width: 361, height: 56)
-                    .background(Color.green)
+                    .background(Color("PrimaryBlack"))
                     .clipShape(RoundedRectangle(cornerRadius: 9))
                     
                     Spacer().frame(height: 43)
